@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "apple-maps-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/appleMaps/AppleMapsWebPart.js",
+          "manifest": "./src/webparts/appleMaps/AppleMapsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "mapkit": {
+      "path": "https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js",
+      "globalName": "mapkit"
+    }
+  },
+  "localizedResources": {
+    "AppleMapsWebPartStrings": "lib/webparts/appleMaps/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
