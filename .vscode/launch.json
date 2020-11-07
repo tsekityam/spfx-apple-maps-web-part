@@ -6,6 +6,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Local workbench (Edge)",
+      "type": "edge",
+      "request": "launch",
+      "url": "https://localhost:4321/temp/workbench.html",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      }
+    },
+    {
       "name": "Local workbench",
       "type": "chrome",
       "request": "launch",
