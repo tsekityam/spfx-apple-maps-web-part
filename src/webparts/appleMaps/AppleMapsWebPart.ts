@@ -76,11 +76,11 @@ export default class AppleMapsWebPart extends BaseClientSideWebPart<
       pages: [
         {
           header: {
-            description: strings.PropertyPaneDescription,
+            description:
+              "Give the pin on the map a specific label or change the address that appears on your page. For example, you can add a specific floor or building name to the street address.",
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
               groupFields: [
                 PropertyPaneToggle("showPin", {
                   label: "Show pin on map",
@@ -93,8 +93,6 @@ export default class AppleMapsWebPart extends BaseClientSideWebPart<
                 }),
                 PropertyPaneTextField("address", {
                   label: "Address to be shown",
-                  description:
-                    "This value only affects the address text shown above the map",
                 }),
                 PropertyPaneSlider("zoom", {
                   label: "Zoom Level",
