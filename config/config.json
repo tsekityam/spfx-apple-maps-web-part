@@ -15,6 +15,10 @@
     "mapkit": {
       "path": "https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js",
       "globalName": "mapkit"
+    },
+    "@pnp/common": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-common/1.2.5/common.es5.umd.bundle.min.js",
+      "globalName": "pnp.common"
     }
   },
   "localizedResources": {
