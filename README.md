@@ -6,9 +6,9 @@ Apple Maps web part for SharePoint modern page
 
 [Bing Maps web part](https://support.microsoft.com/en-us/office/use-the-bing-maps-web-part-c0e3f2f6-dc0d-49df-9308-1bf7c888e794) allows you to display a map on your modern page.
 
-However, Bing Maps is limited by the [restriction](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China) on geographic data in China. Bing Maps display satellite imagery using the WGS-84 coodinate system, but the street maps using the GCJ-02 datum.
+However, Bing Maps is limited by the [restrictions on geographic data in China](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China). Bing Maps display satellite imagery using the WGS-84 coodinate system, but the street maps using the GCJ-02 datum.
 
-When we display a location in China with Bing Maps web part. We may see the satellite imagery layer and the street maps layer is not aligned in aerial view.
+When we display a location in China with Bing Maps web part. We may see the satellite imagery layer and the street maps layer are not aligned in aerial view.
 
 ![](img/bing-maps-web-part.png)
 
