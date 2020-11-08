@@ -41,7 +41,6 @@ export default class AppleMaps extends React.Component<
       type: DialogType.normal,
       title: this.state.error,
       closeButtonAriaLabel: "Close",
-      // subText: 'Do you want to send this message without a subject?',
     };
 
     return (
@@ -72,7 +71,10 @@ export default class AppleMaps extends React.Component<
         !stringIsNullOrEmpty(this.props.address) ? (
           <Label>{this.props.address}</Label>
         ) : null}
-        <div className={styles.map} id="map"></div>
+        <div className={styles.mapContainer}>
+          <div className={styles.dummy}></div>
+          <div className={styles.map} id="map"></div>
+        </div>
       </div>
     );
   }
