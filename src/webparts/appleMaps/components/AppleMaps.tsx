@@ -15,7 +15,7 @@ import {
 import { Label } from "office-ui-fabric-react/lib/Label";
 import { DefaultButton } from "office-ui-fabric-react/lib/Button";
 import { IAppleMapsWebPartProps } from "../AppleMapsWebPart";
-import { stringIsNullOrEmpty } from "@pnp/common";
+import { stringIsNullOrEmpty } from "@pnp/common/util";
 import {
   Spinner,
   SpinnerSize,
