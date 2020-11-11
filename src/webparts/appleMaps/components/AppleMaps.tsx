@@ -25,15 +25,18 @@ export default class AppleMaps extends React.Component<
   IAppleMapsProps,
   IAppleMapsState
 > {
+  private _annotations: any[];
+
   constructor(props: IAppleMapsProps) {
     super(props);
 
     this.state = {
       map: null,
-      annotation: null,
       searching: false,
       error: "",
     };
+
+    this._annotations = [];
   }
 
   public render(): React.ReactElement<IAppleMapsProps> {
@@ -99,7 +102,6 @@ export default class AppleMaps extends React.Component<
 
   private _showArea = (coordinate) => {
     let zoom = 90 / Math.pow(2, this.props.zoom);
-    console.log(zoom);
     let region = new mapkit.CoordinateRegion(
       coordinate,
       new mapkit.CoordinateSpan(zoom, zoom)
@@ -113,14 +115,18 @@ export default class AppleMaps extends React.Component<
   private _showPin = (coordinate) => {
     let annotation = new mapkit.MarkerAnnotation(coordinate);
     annotation.title = this.props.pinLabel;
-    this.setState({ annotation: annotation });
-    this.state.map.showItems([annotation]);
+
+    this._removePin();
+
+    this._annotations.push(annotation);
+    this.state.map.showItems(this._annotations);
   };
 
   private _removePin = () => {
-    if (this.state.annotation) {
-      this.state.map.removeAnnotation(this.state.annotation);
-    }
+    this._annotations.map((value) => {
+      this.state.map.removeAnnotation(value);
+    });
+    this._annotations = [];
   };
 
   private _findCoordinate = (address) => {
