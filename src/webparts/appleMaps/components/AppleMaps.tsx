@@ -98,7 +98,8 @@ export default class AppleMaps extends React.Component<
   };
 
   private _showArea = (coordinate) => {
-    let zoom = this._getZoomLevel();
+    let zoom = 90 / Math.pow(2, this.props.zoom);
+    console.log(zoom);
     let region = new mapkit.CoordinateRegion(
       coordinate,
       new mapkit.CoordinateSpan(zoom, zoom)
@@ -107,38 +108,6 @@ export default class AppleMaps extends React.Component<
     if (this.state.map) {
       this.state.map.region = region;
     }
-  };
-
-  private _getZoomLevel = () => {
-    let zoom = 0;
-    switch (this.props.zoom) {
-      case 1:
-        zoom = 0.01;
-        break;
-      case 2:
-        zoom = 0.1;
-        break;
-      case 3:
-        zoom = 1;
-        break;
-      case 4:
-        zoom = 5;
-        break;
-      case 5:
-        zoom = 10;
-        break;
-      case 6:
-        zoom = 20;
-        break;
-      case 7:
-        zoom = 50;
-        break;
-      case 8:
-        zoom = 100;
-        break;
-    }
-
-    return zoom;
   };
 
   private _showPin = (coordinate) => {

@@ -96,8 +96,8 @@ export default class AppleMapsWebPart extends BaseClientSideWebPart<
                 }),
                 PropertyPaneSlider("zoom", {
                   label: "Zoom Level",
-                  min: 1,
-                  max: 8,
+                  min: 0,
+                  max: 22,
                 }),
               ],
             },
