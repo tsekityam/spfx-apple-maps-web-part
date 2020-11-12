@@ -85,7 +85,6 @@ export default class AppleMaps extends React.Component<
   private _search = (address: string) => {
     this.setState({ searching: true });
 
-    this.props.updateAddress(address);
     this._findCoordinate(address)
       .then((coordinate) => {
         this.setState({ searching: false });
