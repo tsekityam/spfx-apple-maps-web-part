@@ -19,7 +19,7 @@
     "@microsoft/sp-webpart-base": "1.11.0",
     "@pnp/common": "^2.0.11",
     "@pnp/spfx-controls-react": "^2.1.0",
-    "office-ui-fabric-react": "6.214.0",
+    "office-ui-fabric-react": "7.187.0",
     "react": "16.8.5",
     "react-dom": "16.8.5"
   },
